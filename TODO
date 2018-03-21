@@ -1,0 +1,4 @@
+- First docker-compose up will fail since db is empty, it needs to be automatic
+- Add sub repository for roadmap code
+- Script to raname any file *example* (e.g. config/database_example.yml, etc)
+- Add support to MYSQL??
