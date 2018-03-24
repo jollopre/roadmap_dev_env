@@ -2,3 +2,4 @@
 - Add sub repository for roadmap code
 - Script to raname any file *example* (e.g. config/database_example.yml, etc)
 - Add support to MYSQL??
+- Inspect the tasks provided by rails (https://github.com/rails/rails/tree/master/railties/lib/rails/tasks). For example to generate secret (rails secret)
