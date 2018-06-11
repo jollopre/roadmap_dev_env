@@ -6,7 +6,6 @@ A docker environment to run roadmap project.
 
 ```
 $ git clone https://github.com/DMPRoadmap/roadmap.git
-# Configure files at roadmap/config and roadmap/config/initializers
 $ docker-compose build server
 $ docker-compose run --rm server rails db:setup # Will fail if db/seeds.rb is not updated to the latest db models
 ```
