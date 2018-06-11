@@ -17,7 +17,7 @@ $ docker-compose run --rm server rake db:setup
 
 In contrast, if you already have a backup db file, please type the following commands:
 ```
-$ docker-compose run --rm -v "$PWD/dmponline.sql":/tmp/backup.sql server /bin/bash 
+$ docker-compose run --rm -v "<PATH_TO_YOUR_SQL_FILE>":/tmp/backup.sql server /bin/bash # Substitute <PATH_TO_YOUR_SQL_FILE> with the location of your backup file
 $ rake db:drop
 $ rake db:create
 $ psql "dbname=${POSTGRES_DB} host=db user=${POSTGRES_USER} password=${POSTGRES_PASSWORD}" < /tmp/backup.sql
