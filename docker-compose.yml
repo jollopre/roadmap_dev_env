@@ -19,8 +19,12 @@ services:
       - "3000:3000"
     env_file:
       - ./.env
+    environment:
+      - RAILS_ENV=development
+      - DB_HOST=db
     depends_on:
       - db
+      - db_test
   client:
     build:
       context: .
@@ -37,8 +41,13 @@ services:
       - db_volume:/var/lib/postgresql/data
     env_file:
       - ./.env
+  db_test:
+    image: postgres:9.5.5
+    volumes:
+      - db_test_volume:/var/lib/postgresql/data
+    env_file:
+      - ./.env
 volumes:
   db_volume:
+  db_test_volume:
   client_volume:
-
-

@@ -1,6 +1,6 @@
 # roadmap_dev_env
 
-A docker environment to run roadmap project. 
+A docker environment to run roadmap project.
 
 ## Build
 
@@ -35,7 +35,7 @@ $ docker-compose up -d
 In order to run ruby/rails tests, please type:
 
 ```
-$ docker-compose run --rm server rake test
+$ docker-compose run -e 'RAILS_ENV=test' --rm server rake test
 ```
 
 ## Stop
