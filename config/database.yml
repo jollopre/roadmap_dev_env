@@ -4,11 +4,10 @@ defaults: &defaults
   username: <%= ENV['POSTGRES_USER'] %>
   password: <%= ENV['POSTGRES_PASSWORD'] %>
   database: <%= ENV['POSTGRES_DB'] %>
+  host: <%= ENV['DB_HOST']%>
   pool: 5
 
 development:
   <<: *defaults
-  host: <%= ENV['DB_HOST'] %>
-#test:
-#  <<: *defaults
-#  host: db_test
+test:
+  <<: *defaults

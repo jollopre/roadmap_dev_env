@@ -35,7 +35,7 @@ $ docker-compose up -d
 In order to run ruby/rails tests, please type:
 
 ```
-$ docker-compose run -e 'RAILS_ENV=test' --rm server rake test
+$ docker-compose -f docker-compose.yml -f docker-compose.test.yml run --rm server rspec
 ```
 
 ## Stop
